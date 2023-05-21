@@ -1,15 +1,20 @@
 export class Usuario{
-  id: Number;
-  nome: String;
-  nickname: String;
+  id?: number;
+  nome: string;
+  email: string;
+  senha: string;
+  matricula: string;
+
   constructor(
-    id: Number,
-    nome: String,
-    nickname: String
+    nome: string,
+    email: string,
+    senha: string,
+    matricula: string
   ) {
-    this.id = id;
     this.nome = nome;
-    this.nickname = nickname;
+    this.email = email;
+    this.senha = senha;
+    this.matricula = matricula;
   }
 
 
