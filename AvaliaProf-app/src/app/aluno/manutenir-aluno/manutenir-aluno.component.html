@@ -1,0 +1,26 @@
+<div class="container">
+    <mat-card>
+        <mat-card-header><mat-card-title>Cadastrar Aluno</mat-card-title></mat-card-header>
+        <mat-form-field>
+            <mat-label>Nome</mat-label>
+            <input matInput [(ngModel)]="aluno.nome">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Matrícula</mat-label>
+            <input matInput [(ngModel)]="aluno.matricula">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput [(ngModel)]="aluno.email" type="email">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Senha</mat-label>
+            <input matInput [(ngModel)]="aluno.senha" type="password">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Curso</mat-label>
+            <input matInput [(ngModel)]="aluno.curso">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="manutenir()">Cadastrar</button>
+    </mat-card>
+</div>
