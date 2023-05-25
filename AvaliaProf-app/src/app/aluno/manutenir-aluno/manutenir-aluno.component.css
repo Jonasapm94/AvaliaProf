@@ -1,0 +1,9 @@
+.container{
+    width: 50%;
+    margin: 1rem;
+}
+
+.container mat-card{
+    padding: 1rem;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}

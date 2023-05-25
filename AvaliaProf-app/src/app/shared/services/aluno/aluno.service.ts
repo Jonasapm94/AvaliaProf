@@ -18,8 +18,8 @@ export class AlunoService {
     return this.httpClient.post<Aluno>('http://localhost:3000/alunos', aluno);
   }
 
-  pegarId(aluno: Aluno): Observable<Aluno>{
-    return this.httpClient.get<Aluno>(`http://localhost:3000/alunos/${aluno.id}`);
+  pegarPorId(id:string): Observable<Aluno>{
+    return this.httpClient.get<Aluno>(`http://localhost:3000/alunos/${id}`);
   }
 
   editar(aluno: Aluno): Observable<Aluno>{

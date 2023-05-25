@@ -1,46 +1,54 @@
 {
-    "alunos": [
-      {
-        "id": 1,
-        "nome": "dev",
-        "email": "example@email.com",
-        "senha": "12345",
-        "matricula": "123",
-        "curso": "TSI"
-      },
-      {
-        "id": 2,
-        "nome": "Jonas",
-        "email": "jonas@email.com",
-        "senha": "123456",
-        "matricula": "20202370008",
-        "curso": "TSI"
-      }
-    ],
-    "professores": [
-      {
-        "id": 1,
-        "nome": "devTeacher",
-        "email": "exampleprofessor@email.com",
-        "senha": "12345",
-        "matricula": "12345",
-        "disciplinas": [
-          "Disciplina Mock 1",
-          "Disciplina Mock 2"
-        ],
-        "formacoes": [
-          "Formação Mock 1",
-          "Formação Mock 2"
-        ]
-      }
-    ],
-    "avaliacoes": [
-      {
-        "id": 1,
-        "comentario": "Professor legal",
-        "nota": 10,
-        "aluno_id": 1,
-        "professor_id": 1
-      }
-    ]
-  }
+  "alunos": [
+    {
+      "id": 1,
+      "nome": "dev",
+      "email": "example@email.com",
+      "senha": "12345",
+      "matricula": "123",
+      "curso": "TSI"
+    },
+    {
+      "id": 2,
+      "nome": "Jonas",
+      "email": "jonas@email.com",
+      "senha": "123456",
+      "matricula": "20202370008",
+      "curso": "TSI"
+    },
+    {
+      "id": 3,
+      "nome": "Ricardo",
+      "matricula": "20211370022",
+      "email": "Ricardo@gmail.com",
+      "senha": "drhouseep4s8",
+      "curso": "TSI"
+    }
+  ],
+  "professores": [
+    {
+      "id": 1,
+      "nome": "devTeacher",
+      "email": "exampleprofessor@email.com",
+      "senha": "12345",
+      "matricula": "12345",
+      "disciplinas": [
+        "Disciplina Mock 1",
+        "Disciplina Mock 2"
+      ],
+      "formacoes": [
+        "Formação Mock 1",
+        "Formação Mock 2"
+      ]
+    }
+  ],
+  "avaliacoes": [
+    {
+      "id": 1,
+      "comentario": "Professor legal",
+      "nota": 10,
+      "aluno_id": 1,
+      "professor_id": 1
+    }
+  ]
+}
