@@ -8,11 +8,13 @@ import { ProfessorModule } from './professor/professor.module';
 import { AlunoModule } from './aluno/aluno.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { TelaInicialComponent } from './paginas/tela-inicial/tela-inicial.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TelaInicialComponent
   ],
   imports: [
     BrowserModule,

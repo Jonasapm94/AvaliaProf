@@ -4,8 +4,13 @@ import { ManutenirProfessorComponent } from './professor/manutenir-professor/man
 import { ListarProfessorComponent } from './professor/listar-professor/listar-professor.component';
 import { ManutenirAlunoComponent } from './aluno/manutenir-aluno/manutenir-aluno.component';
 import { ListarAlunoComponent } from './aluno/listar-aluno/listar-aluno.component';
+import { TelaInicialComponent } from './paginas/tela-inicial/tela-inicial.component';
 
 const routes: Routes = [
+  {
+    path:'',
+    component:TelaInicialComponent
+  },
   {
     path: 'cadastrarprofessor',
     component: ManutenirProfessorComponent

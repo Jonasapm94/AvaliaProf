@@ -1,5 +1,16 @@
+.nav-bar{
+  display: flex;
+  align-items: center;
+  background-color: var(--secundary-color);
+  color: var(--primary-color);
+  height: 2rem;
+  padding: 1rem;
+  gap: 2rem;
+}
 
-
+button.nav-button{
+  color:var(--primary-color);
+}
 .example-spacer {
     flex: 1 1 auto;
   }
