@@ -31,6 +31,22 @@
       "email": "dr@gmail.com",
       "senha": "vicodin",
       "curso": "medicina"
+    },
+    {
+      "id": 5,
+      "nome": "gustavo",
+      "matricula": "20212360032",
+      "email": "aluno@gmail.ocm",
+      "senha": "lkasjdlaskjd",
+      "curso": "TSI"
+    },
+    {
+      "id": 6,
+      "nome": "ginzaga",
+      "matricula": "20212370032",
+      "email": "gonzaga@gmail.com",
+      "senha": "askdhkjashdksahd",
+      "curso": "TSI"
     }
   ],
   "professores": [

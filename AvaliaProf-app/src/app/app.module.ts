@@ -8,11 +8,12 @@ import { ProfessorModule } from './professor/professor.module';
 import { AlunoModule } from './aluno/aluno.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PaginasModule } from './paginas/paginas.module'
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     ProfessorModule,
     AlunoModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    PaginasModule
   ],
   providers: [],
   bootstrap: [AppComponent]

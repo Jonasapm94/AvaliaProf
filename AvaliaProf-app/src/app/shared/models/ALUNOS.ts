@@ -1,5 +1,5 @@
-import {Aluno} from './aluno';
+// import {Aluno} from './aluno';
 
-export const ALUNOS: Array<Aluno> = [
+// export const ALUNOS: Array<Aluno> = [
 
-]
+// ]
