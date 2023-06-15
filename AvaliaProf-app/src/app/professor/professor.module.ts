@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ManutenirProfessorComponent } from './manutenir-professor/manutenir-professor.component';
 import { ListarProfessorComponent } from './listar-professor/listar-professor.component';
 import { AngularMaterialModule } from 'src/app/angular-material/angular-material.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { AngularMaterialModule } from 'src/app/angular-material/angular-material
   ],
   imports: [
     CommonModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    FormsModule
   ],
   exports:[
     ManutenirProfessorComponent,
