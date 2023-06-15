@@ -11,21 +11,24 @@
 
         <!-- OPÇÕES DO MENU -->
     <mat-menu #menu="matMenu">
-        <button [routerLink]="['cadastrarprofessor']" 
+        <button [routerLink]="['cadastrarprofessor']"
                 mat-menu-item>
             Cadastrar Professor
         </button>
-        <button [routerLink]="['listarprofessores']" 
+        <button [routerLink]="['listarprofessores']"
                 mat-menu-item>
             Listar Professores
         </button>
-        <button [routerLink]="['cadastraraluno']" 
+        <button [routerLink]="['cadastraraluno']"
                 mat-menu-item>
             Cadastrar Aluno
         </button>
-        <button [routerLink]="['listaralunos']" 
+        <button [routerLink]="['listaralunos']"
                 mat-menu-item>
             Listar Alunos
+        </button>
+        <button [routerLink]="['avaliacaoprofessor']" mat-menu-item>
+          Avaliar Professor
         </button>
     </mat-menu>
 

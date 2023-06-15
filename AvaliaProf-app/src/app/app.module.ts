@@ -9,12 +9,14 @@ import { AlunoModule } from './aluno/aluno.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TelaInicialComponent } from './paginas/tela-inicial/tela-inicial.component';
+import { TelaAvaliacaoComponent } from './paginas/tela-avaliacao/tela-avaliacao.component';
+import { PaginasModule } from './paginas/paginas.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TelaInicialComponent
+
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,8 @@ import { TelaInicialComponent } from './paginas/tela-inicial/tela-inicial.compon
     ProfessorModule,
     AlunoModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    PaginasModule
   ],
   providers: [],
   bootstrap: [AppComponent]

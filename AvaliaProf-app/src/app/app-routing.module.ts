@@ -5,6 +5,7 @@ import { ListarProfessorComponent } from './professor/listar-professor/listar-pr
 import { ManutenirAlunoComponent } from './aluno/manutenir-aluno/manutenir-aluno.component';
 import { ListarAlunoComponent } from './aluno/listar-aluno/listar-aluno.component';
 import { TelaInicialComponent } from './paginas/tela-inicial/tela-inicial.component';
+import { TelaAvaliacaoComponent } from './paginas/tela-avaliacao/tela-avaliacao.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'listaralunos',
     component: ListarAlunoComponent
+  },
+  {
+    path: 'avaliacaoprofessor',
+    component: TelaAvaliacaoComponent
   }
 ];
 
