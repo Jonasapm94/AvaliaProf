@@ -1,43 +1,50 @@
 <div class="nav-bar">
-    <!-- LOGO -->
-    <span>AvaliaProf</span>
-
-    <!-- MENU -->
-    <button class="nav-button" mat-button
-            [matMenuTriggerFor]="menu">
-        <mat-icon>menu</mat-icon>
-        Menu
-    </button>
-
-        <!-- OPÇÕES DO MENU -->
-    <mat-menu #menu="matMenu">
-        <button [routerLink]="['cadastrarprofessor']"
-                mat-menu-item>
-            Cadastrar Professor
+    <div id="logo-menu">
+        <!-- LOGO -->
+        <span id="logo">AvaliaProf</span>
+    
+        <!-- MENU -->
+        <button class="nav-button" mat-button
+                [matMenuTriggerFor]="menu">
+            <mat-icon>menu</mat-icon>
+            Menu
         </button>
-        <button [routerLink]="['listarprofessores']"
-                mat-menu-item>
-            Listar Professores
-        </button>
-        <button [routerLink]="['cadastraraluno']"
-                mat-menu-item>
-            Cadastrar Aluno
-        </button>
-        <button [routerLink]="['listaralunos']"
-                mat-menu-item>
-            Listar Alunos
-        </button>
-        <button [routerLink]="['avaliacaoprofessor']" mat-menu-item>
-          Avaliar Professor
-        </button>
-    </mat-menu>
+    
+            <!-- OPÇÕES DO MENU -->
+        <mat-menu #menu="matMenu">
+            <button [routerLink]="['cadastrarprofessor']"
+                    mat-menu-item>
+                Cadastrar Professor
+            </button>
+            <button [routerLink]="['listarprofessores']"
+                    mat-menu-item>
+                Listar Professores
+            </button>
+            <button [routerLink]="['cadastraraluno']"
+                    mat-menu-item>
+                Cadastrar Aluno
+            </button>
+            <button [routerLink]="['listaralunos']"
+                    mat-menu-item>
+                Listar Alunos
+            </button>
+            <button [routerLink]="['avaliacaoprofessor']" mat-menu-item>
+              Avaliar Professor
+            </button>
+        </mat-menu>
+    </div>
 
     <!-- BARRA DE PESQUISA -->
-    <form>
-        <mat-form-field class="example-full-width">
-            <input matInput placeholder="Pesquisar">
-        </mat-form-field>
-    </form>
+    <div id="barra-pesquisa">
+        <select id="filtro">
+            <option value="tudo" selected>Tudo</option>
+            <option value="professor" >Professor</option>
+            <option value="disciplina" >Disciplina</option>
+        </select>
+        <input  matInput placeholder="Pesquisar">
+    </div>
+        
+        
 
     <!-- FAZER LOGIN -->
     <button class="nav-button" mat-button>

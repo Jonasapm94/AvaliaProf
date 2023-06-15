@@ -2,6 +2,47 @@
     background-color: var(--primary-color);
 }
 
+h1{
+  font-family: var(--regular-font);
+  font-size: 2.5rem;
+
+  color: var(--secundary-color);
+}
+
+.logo{
+  font-family: var(--logo-font);
+  color: var(--secundary-color);
+}
+
+#hero-banner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 10rem;
+  font-family: var(--regular-font);
+  color: var(--secundary-color);
+  font-size: 1rem;
+}
+
+#bem-vindo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  
+}
+
+#hero-banner button{
+  font-family: var(--regular-font);
+  color: var(--primary-color);
+  background-color: var(--secundary-color);
+  font-size: 1rem;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  width: 30%;
+}
+
 #welcome {
   width: 100%;
   height: 83px;
