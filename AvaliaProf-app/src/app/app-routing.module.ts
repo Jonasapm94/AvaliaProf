@@ -31,6 +31,10 @@ const routes: Routes = [
   {
     path: 'avaliacaoprofessor',
     component: TelaAvaliacaoComponent
+  },
+  {
+    path: 'home',
+    component: TelaInicialComponent
   }
 ];
 

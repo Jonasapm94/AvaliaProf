@@ -1,15 +1,15 @@
 <div class="nav-bar">
     <div id="logo-menu">
         <!-- LOGO -->
-        <span id="logo">AvaliaProf</span>
-    
+        <span id="logo" [routerLink]="['home']">AvaliaProf</span>
+
         <!-- MENU -->
         <button class="nav-button" mat-button
                 [matMenuTriggerFor]="menu">
             <mat-icon>menu</mat-icon>
             Menu
         </button>
-    
+
             <!-- OPÇÕES DO MENU -->
         <mat-menu #menu="matMenu">
             <button [routerLink]="['cadastrarprofessor']"
@@ -43,8 +43,8 @@
         </select>
         <input  matInput placeholder="Pesquisar">
     </div>
-        
-        
+
+
 
     <!-- FAZER LOGIN -->
     <button class="nav-button" mat-button>

@@ -38,6 +38,8 @@
 #logo{
   font-family: var(--logo-font);
   font-size: 1.5rem;
+  cursor: pointer;
+
 }
 
 button.nav-button{
