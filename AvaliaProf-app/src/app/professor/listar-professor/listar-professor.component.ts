@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Professor } from 'src/app/shared/models/professor';
+import { ProfessorFirestoreService } from 'src/app/shared/services/professor-firestore/professor-firestore.service';
 import { ProfessorService } from 'src/app/shared/services/professor/professor.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { ProfessorService } from 'src/app/shared/services/professor/professor.se
 export class ListarProfessorComponent implements OnInit{
   professores: Professor[]= [];
 
-  constructor(private professorService: ProfessorService) {
+  constructor(private professorService: ProfessorFirestoreService) {
 
   }
 

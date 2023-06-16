@@ -11,14 +11,14 @@ import { Router } from '@angular/router';
 export class ManutenirProfessorComponent {
   professor: Professor;
   constructor(private roteador: Router, private professorService:ProfessorService) {
-    this.professor = new Professor(0,'','','','',[],[])
+    this.professor = new Professor("",'','','','',[],[])
   }
 
   manutenir() {
     this.professorService.inserir(this.professor).subscribe(
       (professorRetornado) => {
         console.log(professorRetornado);
-        this.professor = new Professor(0,'','','','',[],[]);
+        this.professor = new Professor("",'','','','',[],[]);
         this.roteador.navigate(['listarprofessores'])
       }
     )
