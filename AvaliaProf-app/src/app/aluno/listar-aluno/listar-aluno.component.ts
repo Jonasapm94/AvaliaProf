@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Aluno } from 'src/app/shared/models/aluno';
+import { AlunoFirestoreService } from 'src/app/shared/services/aluno-firestore/aluno-firestore.service';
 import { AlunoService } from 'src/app/shared/services/aluno/aluno.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { AlunoService } from 'src/app/shared/services/aluno/aluno.service';
 export class ListarAlunoComponent implements OnInit{
   alunos: Aluno[] = [];
 
-  constructor(private alunoService: AlunoService) {
+  constructor(private alunoService: AlunoFirestoreService) {
 
   }
 

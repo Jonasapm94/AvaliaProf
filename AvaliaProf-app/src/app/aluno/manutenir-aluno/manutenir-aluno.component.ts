@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Aluno } from 'src/app/shared/models/aluno';
+import { AlunoFirestoreService } from 'src/app/shared/services/aluno-firestore/aluno-firestore.service';
 import { AlunoService } from 'src/app/shared/services/aluno/aluno.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { AlunoService } from 'src/app/shared/services/aluno/aluno.service';
 })
 export class ManutenirAlunoComponent {
   aluno:Aluno;
-  constructor(private roteador:Router, private alunoService:AlunoService){
+  constructor(private roteador:Router, private alunoService:AlunoFirestoreService){
     this.aluno = new Aluno("",'','','','','');
   }
   manutenir(){

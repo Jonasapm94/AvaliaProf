@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Professor } from 'src/app/shared/models/professor';
 import { ProfessorService } from 'src/app/shared/services/professor/professor.service';
 import { Router } from '@angular/router';
+import { ProfessorFirestoreService } from 'src/app/shared/services/professor-firestore/professor-firestore.service';
 
 @Component({
   selector: 'app-manutenir-professor',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class ManutenirProfessorComponent {
   professor: Professor;
-  constructor(private roteador: Router, private professorService:ProfessorService) {
+  constructor(private roteador: Router, private professorService:ProfessorFirestoreService) {
     this.professor = new Professor("",'','','','',[],[])
   }
 

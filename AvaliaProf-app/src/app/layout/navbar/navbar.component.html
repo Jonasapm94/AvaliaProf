@@ -31,10 +31,6 @@
             <button [routerLink]="['avaliacaoprofessor']" mat-menu-item>
               Avaliar Professor
             </button>
-            <button [routerLink]="['telalogin']"
-                    mat-menu-item>
-                Tela de Login
-            </button>
         </mat-menu>
     </div>
 
@@ -51,7 +47,7 @@
 
 
     <!-- FAZER LOGIN -->
-    <button class="nav-button" mat-button>
+    <button class="nav-button" [routerLink]="['telalogin']" mat-button>
         Fazer Login
     </button>
 </div>
