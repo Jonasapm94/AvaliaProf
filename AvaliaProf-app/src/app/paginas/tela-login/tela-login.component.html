@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="logo">
+    <h1>AVALIAPROF</h1>
+  </div>
+
+  <div class="login-container">
+    <div class="title-container">
+      <h1 id="login-title">LOGIN</h1>
+    </div>
+
+    <form class="form-container">
+      <mat-form-field class="mat-form">
+        <mat-label>Email</mat-label>
+        <input matInput [formControl]="emailFormControl"
+               [errorStateMatcher]="matcher">
+        <mat-hint></mat-hint>
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Por favor insira um email válido
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Email é <strong>obrigatório</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="mat-form">
+        <mat-label>Senha</mat-label>
+        <input matInput [formControl]="passwordFormControl" class="input-form">
+        <mat-hint></mat-hint>
+        <mat-error *ngIf="passwordFormControl.hasError('required')">
+          Senha é <strong>obrigatória</strong>
+        </mat-error>
+      </mat-form-field>
+    </form>
+    <p><a href="">Esqueceu a senha?</a></p>
+    <button mat-button class="login-button">Login</button>
+  </div>
+</div>

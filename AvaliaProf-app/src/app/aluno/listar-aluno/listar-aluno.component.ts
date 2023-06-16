@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ALUNOS } from 'src/app/shared/models/ALUNOS';
 import { Aluno } from 'src/app/shared/models/aluno';
 import { AlunoService } from 'src/app/shared/services/aluno/aluno.service';
 
