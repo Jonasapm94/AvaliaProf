@@ -8,11 +8,16 @@ import { ProfessorModule } from './professor/professor.module';
 import { AlunoModule } from './aluno/aluno.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { TelaInicialComponent } from './paginas/tela-inicial/tela-inicial.component';
+import { TelaAvaliacaoComponent } from './paginas/tela-avaliacao/tela-avaliacao.component';
+import { PaginasModule } from './paginas/paginas.module';
+import { FirestoreModule } from './firestore/firestore.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -21,7 +26,9 @@ import { HttpClientModule } from '@angular/common/http';
     ProfessorModule,
     AlunoModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    PaginasModule,
+    FirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

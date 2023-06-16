@@ -3,27 +3,28 @@
         <mat-card-header><mat-card-title>Cadastrar Professor</mat-card-title></mat-card-header>
         <mat-form-field>
             <mat-label>Nome</mat-label>
-            <input matInput>
+            <input matInput [(ngModel)]="professor.nome">
         </mat-form-field>
         <mat-form-field>
             <mat-label>Matrícula</mat-label>
-            <input matInput>
+            <input matInput [(ngModel)]="professor.matricula">
         </mat-form-field>
         <mat-form-field>
             <mat-label>Email</mat-label>
-            <input matInput type="email">
+            <input matInput type="email" [(ngModel)]="professor.email">
         </mat-form-field>
         <mat-form-field>
             <mat-label>Senha</mat-label>
-            <input matInput type="password">
+            <input matInput type="password" [(ngModel)]="professor.senha">
         </mat-form-field>
         <mat-form-field>
             <mat-label>Disciplinas</mat-label>
-            <input matInput>
+            <input matInput [(ngModel)]="professor.disciplinas">
         </mat-form-field>
         <mat-form-field>
             <mat-label>Formações</mat-label>
-            <input matInput>
+            <input matInput [(ngModel)]="professor.formacoes">
         </mat-form-field>
+        <button mat-raised-button color="primary" (click)="manutenir()">Cadastrar</button>
     </mat-card>
 </div>

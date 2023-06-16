@@ -11,13 +11,13 @@ import { AlunoService } from 'src/app/shared/services/aluno/aluno.service';
 export class ManutenirAlunoComponent {
   aluno:Aluno;
   constructor(private roteador:Router, private alunoService:AlunoService){
-    this.aluno = new Aluno(0,'','','','','');
+    this.aluno = new Aluno("",'','','','','');
   }
   manutenir(){
     this.alunoService.inserir(this.aluno).subscribe(
       (alunoRetornado)=>{
         console.log(alunoRetornado);
-        this.aluno = new Aluno(0,'','','','','');
+        this.aluno = new Aluno("",'','','','','');
         this.roteador.navigate(['listaralunos'])
       }
     )

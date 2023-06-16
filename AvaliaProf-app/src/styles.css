@@ -1,4 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('./fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Graduate';
+    src: url('./fonts/Graduate-Regular.ttf') format('truetype');
+}
+
+:root{
+    --primary-color: #d0f3f4;
+    --secundary-color: #2f2c58;
+    --logo-font: 'Graduate', cursive;
+    --regular-font:'Quicksand',sans-serif;
+}
+
+body{
+    margin: 0;
+    background-color: var(--primary-color);
+    font-family: var(--regular-font);
+    overflow: hidden;
+}

@@ -1,0 +1,26 @@
+<h1>Escreva sua Avaliação</h1>
+<form class="form-container">
+  <mat-form-field class="mat-form">
+    <mat-label>Nome do professor</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <mat-form-field class="mat-form">
+    <mat-label>Disciplia</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Nota</mat-label>
+    <input type="number" matInput>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Comentário</mat-label>
+    <input type="text" matInput>
+  </mat-form-field>
+
+  <button mat-button (click)="publicar()">Publicar</button>
+</form>
+
+

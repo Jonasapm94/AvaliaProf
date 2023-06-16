@@ -1,0 +1,16 @@
+mat-icon {
+  margin-top: 1rem;
+}
+
+.container {
+  margin-left: 1rem;
+}
+
+.card-professor {
+  width: 40%;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  margin: 0.5rem 0;
+
+  background-color: rgb(245, 245, 245);
+}

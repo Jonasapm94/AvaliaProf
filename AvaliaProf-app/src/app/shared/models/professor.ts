@@ -3,7 +3,7 @@ import { Usuario } from "./usuario";
 export class Professor extends Usuario{
     disciplinas:string[];
     formacoes:string[];
-    constructor(id:number,
+    constructor(id:string,
                 nome:string,
                 matricula:string,
                 email:string,

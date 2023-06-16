@@ -1,28 +1,53 @@
 <div class="nav-bar">
-    <mat-toolbar color="primary">
-        <button mat-icon-button 
+    <div id="logo-menu">
+        <!-- LOGO -->
+        <span id="logo" [routerLink]="['home']">AvaliaProf</span>
+
+        <!-- MENU -->
+        <button class="nav-button" mat-button
                 [matMenuTriggerFor]="menu">
-          <mat-icon>menu</mat-icon>
+            <mat-icon>menu</mat-icon>
+            Menu
         </button>
+
+            <!-- OPÇÕES DO MENU -->
         <mat-menu #menu="matMenu">
-            <button [routerLink]="['cadastrarprofessor']" 
+            <button [routerLink]="['cadastrarprofessor']"
                     mat-menu-item>
                 Cadastrar Professor
             </button>
-            <button [routerLink]="['listarprofessores']" 
+            <button [routerLink]="['listarprofessores']"
                     mat-menu-item>
                 Listar Professores
             </button>
-            <button [routerLink]="['cadastraraluno']" 
+            <button [routerLink]="['cadastraraluno']"
                     mat-menu-item>
                 Cadastrar Aluno
             </button>
-            <button [routerLink]="['listaralunos']" 
+            <button [routerLink]="['listaralunos']"
                     mat-menu-item>
                 Listar Alunos
             </button>
+            <button [routerLink]="['avaliacaoprofessor']" mat-menu-item>
+              Avaliar Professor
+            </button>
         </mat-menu>
-        <span>AvaliaProf</span>
-        <span class="example-spacer"></span>
-    </mat-toolbar>
+    </div>
+
+    <!-- BARRA DE PESQUISA -->
+    <div id="barra-pesquisa">
+        <select id="filtro">
+            <option value="tudo" selected>Tudo</option>
+            <option value="professor" >Professor</option>
+            <option value="disciplina" >Disciplina</option>
+        </select>
+        <input  matInput placeholder="Pesquisar">
+    </div>
+
+
+
+    <!-- FAZER LOGIN -->
+    <button class="nav-button" mat-button>
+        Fazer Login
+    </button>
 </div>

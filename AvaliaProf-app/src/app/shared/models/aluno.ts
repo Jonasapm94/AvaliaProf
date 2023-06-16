@@ -2,7 +2,7 @@ import { Usuario } from "./usuario";
 
 export class Aluno extends Usuario{
     public curso:string;
-    constructor(id:number,
+    constructor(id:string,
         nome:string,
         matricula:string,
         email:string,
