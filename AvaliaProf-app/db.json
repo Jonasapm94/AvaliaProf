@@ -1,486 +1,59 @@
 {
   "disciplinas": [
     {
-      "id": 3,
+      "professores": [],
       "nome": "Pweb1",
-      "professores": [
-        {
-          "id": 1,
-          "nome": "Gustavinho",
-          "matricula": "123456",
-          "email": "gus@gmail.com",
-          "senha": "=/+*hRz,MyB84PtL",
-          "avaliacoes": [],
-          "disciplinas": [
-            {
-              "id": 3,
-              "nome": "Pweb1",
-              "professores": []
-            },
-            {
-              "professores": [],
-              "nome": "Pweb2",
-              "id": 4
-            }
-          ],
-          "formacoes": "TSI"
-        },
-        {
-          "id": 1,
-          "nome": "Gustavinho",
-          "matricula": "123456",
-          "email": "gus@gmail.com",
-          "senha": "=/+*hRz,MyB84PtL",
-          "avaliacoes": [],
-          "disciplinas": [
-            {
-              "id": 2,
-              "nome": "Aps 2",
-              "professores": [
-                {
-                  "id": 1,
-                  "nome": "Gustavinho",
-                  "matricula": "123456",
-                  "email": "gus@gmail.com",
-                  "senha": "=/+*hRz,MyB84PtL",
-                  "avaliacoes": [],
-                  "disciplinas": [
-                    {
-                      "id": 2,
-                      "nome": "Aps",
-                      "professores": []
-                    }
-                  ],
-                  "formacoes": "TSI"
-                }
-              ]
-            },
-            {
-              "id": 3,
-              "nome": "Pweb1",
-              "professores": [
-                {
-                  "id": 1,
-                  "nome": "Gustavinho",
-                  "matricula": "123456",
-                  "email": "gus@gmail.com",
-                  "senha": "=/+*hRz,MyB84PtL",
-                  "avaliacoes": [],
-                  "disciplinas": [
-                    {
-                      "id": 3,
-                      "nome": "Pweb1",
-                      "professores": []
-                    },
-                    {
-                      "professores": [],
-                      "nome": "Pweb2",
-                      "id": 4
-                    }
-                  ],
-                  "formacoes": "TSI"
-                }
-              ]
-            },
-            {
-              "professores": [
-                {
-                  "id": 1,
-                  "nome": "Gustavinho",
-                  "matricula": "123456",
-                  "email": "gus@gmail.com",
-                  "senha": "=/+*hRz,MyB84PtL",
-                  "avaliacoes": [],
-                  "disciplinas": [
-                    {
-                      "id": 3,
-                      "nome": "Pweb1",
-                      "professores": []
-                    },
-                    {
-                      "professores": [],
-                      "nome": "Pweb2",
-                      "id": 4
-                    }
-                  ],
-                  "formacoes": "TSI"
-                }
-              ],
-              "nome": "Pweb2",
-              "id": 4
-            }
-          ],
-          "formacoes": "TSI"
-        },
-        {
-          "id": 1,
-          "nome": "Gustavinho",
-          "matricula": "123456",
-          "email": "gus@gmail.com",
-          "senha": "=/+*hRz,MyB84PtL",
-          "avaliacoes": [],
-          "disciplinas": [
-            {
-              "id": 3,
-              "nome": "Pweb1",
-              "professores": [
-                {
-                  "id": 1,
-                  "nome": "Gustavinho",
-                  "matricula": "123456",
-                  "email": "gus@gmail.com",
-                  "senha": "=/+*hRz,MyB84PtL",
-                  "avaliacoes": [],
-                  "disciplinas": [
-                    {
-                      "id": 3,
-                      "nome": "Pweb1",
-                      "professores": []
-                    },
-                    {
-                      "professores": [],
-                      "nome": "Pweb2",
-                      "id": 4
-                    }
-                  ],
-                  "formacoes": "TSI"
-                },
-                {
-                  "id": 1,
-                  "nome": "Gustavinho",
-                  "matricula": "123456",
-                  "email": "gus@gmail.com",
-                  "senha": "=/+*hRz,MyB84PtL",
-                  "avaliacoes": [],
-                  "disciplinas": [
-                    {
-                      "id": 2,
-                      "nome": "Aps 2",
-                      "professores": [
-                        {
-                          "id": 1,
-                          "nome": "Gustavinho",
-                          "matricula": "123456",
-                          "email": "gus@gmail.com",
-                          "senha": "=/+*hRz,MyB84PtL",
-                          "avaliacoes": [],
-                          "disciplinas": [
-                            {
-                              "id": 2,
-                              "nome": "Aps",
-                              "professores": []
-                            }
-                          ],
-                          "formacoes": "TSI"
-                        }
-                      ]
-                    },
-                    {
-                      "id": 3,
-                      "nome": "Pweb1",
-                      "professores": [
-                        {
-                          "id": 1,
-                          "nome": "Gustavinho",
-                          "matricula": "123456",
-                          "email": "gus@gmail.com",
-                          "senha": "=/+*hRz,MyB84PtL",
-                          "avaliacoes": [],
-                          "disciplinas": [
-                            {
-                              "id": 3,
-                              "nome": "Pweb1",
-                              "professores": []
-                            },
-                            {
-                              "professores": [],
-                              "nome": "Pweb2",
-                              "id": 4
-                            }
-                          ],
-                          "formacoes": "TSI"
-                        }
-                      ]
-                    },
-                    {
-                      "professores": [
-                        {
-                          "id": 1,
-                          "nome": "Gustavinho",
-                          "matricula": "123456",
-                          "email": "gus@gmail.com",
-                          "senha": "=/+*hRz,MyB84PtL",
-                          "avaliacoes": [],
-                          "disciplinas": [
-                            {
-                              "id": 3,
-                              "nome": "Pweb1",
-                              "professores": []
-                            },
-                            {
-                              "professores": [],
-                              "nome": "Pweb2",
-                              "id": 4
-                            }
-                          ],
-                          "formacoes": "TSI"
-                        }
-                      ],
-                      "nome": "Pweb2",
-                      "id": 4
-                    }
-                  ],
-                  "formacoes": "TSI"
-                }
-              ]
-            }
-          ],
-          "formacoes": "TSI"
-        }
-      ]
+      "id": 1
+    },
+    {
+      "professores": [],
+      "nome": "Pweb2",
+      "id": 2
+    },
+    {
+      "professores": [],
+      "nome": "Pweb3",
+      "id": 3
     },
     {
       "professores": [
         {
-          "id": 1,
-          "nome": "Gustavinho",
+          "id": 2,
+          "nome": "Rogerio",
           "matricula": "123456",
-          "email": "gus@gmail.com",
-          "senha": "=/+*hRz,MyB84PtL",
+          "email": "Roger@email.com",
+          "senha": "123456",
           "avaliacoes": [],
           "disciplinas": [
-            {
-              "id": 3,
-              "nome": "Pweb1",
-              "professores": []
-            },
             {
               "professores": [],
-              "nome": "Pweb2",
+              "nome": "Algebra",
               "id": 4
             }
           ],
-          "formacoes": "TSI"
-        },
-        {
-          "id": 1,
-          "nome": "Gustavinho",
-          "matricula": "123456",
-          "email": "gus@gmail.com",
-          "senha": "=/+*hRz,MyB84PtL",
-          "avaliacoes": [],
-          "disciplinas": [
-            {
-              "id": 2,
-              "nome": "Aps 2",
-              "professores": [
-                {
-                  "id": 1,
-                  "nome": "Gustavinho",
-                  "matricula": "123456",
-                  "email": "gus@gmail.com",
-                  "senha": "=/+*hRz,MyB84PtL",
-                  "avaliacoes": [],
-                  "disciplinas": [
-                    {
-                      "id": 2,
-                      "nome": "Aps",
-                      "professores": []
-                    }
-                  ],
-                  "formacoes": "TSI"
-                }
-              ]
-            },
-            {
-              "id": 3,
-              "nome": "Pweb1",
-              "professores": [
-                {
-                  "id": 1,
-                  "nome": "Gustavinho",
-                  "matricula": "123456",
-                  "email": "gus@gmail.com",
-                  "senha": "=/+*hRz,MyB84PtL",
-                  "avaliacoes": [],
-                  "disciplinas": [
-                    {
-                      "id": 3,
-                      "nome": "Pweb1",
-                      "professores": []
-                    },
-                    {
-                      "professores": [],
-                      "nome": "Pweb2",
-                      "id": 4
-                    }
-                  ],
-                  "formacoes": "TSI"
-                }
-              ]
-            },
-            {
-              "professores": [
-                {
-                  "id": 1,
-                  "nome": "Gustavinho",
-                  "matricula": "123456",
-                  "email": "gus@gmail.com",
-                  "senha": "=/+*hRz,MyB84PtL",
-                  "avaliacoes": [],
-                  "disciplinas": [
-                    {
-                      "id": 3,
-                      "nome": "Pweb1",
-                      "professores": []
-                    },
-                    {
-                      "professores": [],
-                      "nome": "Pweb2",
-                      "id": 4
-                    }
-                  ],
-                  "formacoes": "TSI"
-                }
-              ],
-              "nome": "Pweb2",
-              "id": 4
-            }
-          ],
-          "formacoes": "TSI"
+          "formacoes": "Algebra"
         }
       ],
-      "nome": "Pweb2",
+      "nome": "Algebra",
       "id": 4
-    }
-  ],
-  "professores": [
+    },
     {
-      "id": 1,
-      "nome": "Gustavinho",
-      "matricula": "123456",
-      "email": "gus@gmail.com",
-      "senha": "=/+*hRz,MyB84PtL",
-      "avaliacoes": [],
-      "disciplinas": [
-        {
-          "id": 3,
-          "nome": "Pweb1",
-          "professores": [
-            {
-              "id": 1,
-              "nome": "Gustavinho",
-              "matricula": "123456",
-              "email": "gus@gmail.com",
-              "senha": "=/+*hRz,MyB84PtL",
-              "avaliacoes": [],
-              "disciplinas": [
-                {
-                  "id": 3,
-                  "nome": "Pweb1",
-                  "professores": []
-                },
-                {
-                  "professores": [],
-                  "nome": "Pweb2",
-                  "id": 4
-                }
-              ],
-              "formacoes": "TSI"
-            },
-            {
-              "id": 1,
-              "nome": "Gustavinho",
-              "matricula": "123456",
-              "email": "gus@gmail.com",
-              "senha": "=/+*hRz,MyB84PtL",
-              "avaliacoes": [],
-              "disciplinas": [
-                {
-                  "id": 2,
-                  "nome": "Aps 2",
-                  "professores": [
-                    {
-                      "id": 1,
-                      "nome": "Gustavinho",
-                      "matricula": "123456",
-                      "email": "gus@gmail.com",
-                      "senha": "=/+*hRz,MyB84PtL",
-                      "avaliacoes": [],
-                      "disciplinas": [
-                        {
-                          "id": 2,
-                          "nome": "Aps",
-                          "professores": []
-                        }
-                      ],
-                      "formacoes": "TSI"
-                    }
-                  ]
-                },
-                {
-                  "id": 3,
-                  "nome": "Pweb1",
-                  "professores": [
-                    {
-                      "id": 1,
-                      "nome": "Gustavinho",
-                      "matricula": "123456",
-                      "email": "gus@gmail.com",
-                      "senha": "=/+*hRz,MyB84PtL",
-                      "avaliacoes": [],
-                      "disciplinas": [
-                        {
-                          "id": 3,
-                          "nome": "Pweb1",
-                          "professores": []
-                        },
-                        {
-                          "professores": [],
-                          "nome": "Pweb2",
-                          "id": 4
-                        }
-                      ],
-                      "formacoes": "TSI"
-                    }
-                  ]
-                },
-                {
-                  "professores": [
-                    {
-                      "id": 1,
-                      "nome": "Gustavinho",
-                      "matricula": "123456",
-                      "email": "gus@gmail.com",
-                      "senha": "=/+*hRz,MyB84PtL",
-                      "avaliacoes": [],
-                      "disciplinas": [
-                        {
-                          "id": 3,
-                          "nome": "Pweb1",
-                          "professores": []
-                        },
-                        {
-                          "professores": [],
-                          "nome": "Pweb2",
-                          "id": 4
-                        }
-                      ],
-                      "formacoes": "TSI"
-                    }
-                  ],
-                  "nome": "Pweb2",
-                  "id": 4
-                }
-              ],
-              "formacoes": "TSI"
-            }
-          ]
-        }
-      ],
-      "formacoes": "TSI"
+      "professores": [],
+      "nome": "Redes",
+      "id": 5
+    },
+    {
+      "professores": [],
+      "nome": "APS",
+      "id": 6
+    },
+    {
+      "professores": [],
+      "nome": "APE",
+      "id": 7
     }
   ],
+  "professores": [],
   "alunos": [],
   "avaliacoes": []
 }

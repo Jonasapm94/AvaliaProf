@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { Disciplina } from 'src/app/shared/models/disciplina';
 import { DisciplinaService } from 'src/app/shared/services/disciplina/disciplina.service';
 import { ActivatedRoute } from '@angular/router';
+import { MensagensService } from 'src/app/shared/services/mensagens/mensagens.service';
 
 @Component({
   selector: 'app-manutenir-professor',
@@ -20,7 +21,8 @@ export class ManutenirProfessorComponent implements OnChanges{
   constructor(private roteador: Router,
               private rotaAtiva: ActivatedRoute, 
               private professorService:ProfessorService,
-              private disciplinaService: DisciplinaService) {
+              private disciplinaService: DisciplinaService,
+              private mensagensService: MensagensService) {
     this.professor = new Professor(0,'','','','',[],[])
     this.disciplinaService.listar().subscribe(
       (disciplinasRetornadas: Disciplina[]) => {
@@ -44,29 +46,40 @@ export class ManutenirProfessorComponent implements OnChanges{
   }
 
   manutenir() {
-    this.professorService.inserir(this.professor).subscribe(
-      (professorRetornado) => {
-        for (let disciplina of this.professor.disciplinas) {
-          disciplina.professores.push(professorRetornado);
-          this.disciplinaService.editar(disciplina).subscribe();
+    try{
+
+      this.professorService.inserir(this.professor).subscribe(
+        (professorRetornado) => {
+          for (let disciplina of this.professor.disciplinas) {
+            disciplina.professores.push(professorRetornado);
+            this.disciplinaService.editar(disciplina).subscribe();
+          }
+          this.professor = new Professor(0,'','','','',[],[]);
+          this.mensagensService.sucesso('Professor cadastrado com sucesso!');
+          this.roteador.navigate(['listarprofessores'])
         }
-        this.professor = new Professor(0,'','','','',[],[]);
-        this.roteador.navigate(['listarprofessores'])
-      }
-    )
+      )
+    } catch(erro){
+      this.mensagensService.erro('Erro ao cadastrar professor!');
+    }
   }
 
   editar() {
-    this.professorService.editar(this.professor).subscribe(
-      (professorRetornado) => {
-        for (let disciplina of this.professor.disciplinas) {
-          disciplina.professores.push(professorRetornado);
-          this.disciplinaService.editar(disciplina).subscribe();
+    try{
+      this.professorService.editar(this.professor).subscribe(
+        (professorRetornado) => {
+          for (let disciplina of this.professor.disciplinas) {
+            disciplina.professores.push(professorRetornado);
+            this.disciplinaService.editar(disciplina).subscribe();
+          }
+          this.professor = new Professor(0,'','','','',[],[]);
+          this.isEdicao = false;
+          this.mensagensService.sucesso('Professor editado com sucesso!');
+          this.roteador.navigate(['listarprofessores'])
         }
-        this.professor = new Professor(0,'','','','',[],[]);
-        this.roteador.navigate(['listarprofessores'])
-        this.isEdicao = false;
-      }
-    )
+      )
+    } catch(erro){
+      this.mensagensService.erro('Erro ao editar professor!');
+    }
   }
 }

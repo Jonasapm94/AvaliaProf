@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Disciplina } from 'src/app/shared/models/disciplina';
 import { DisciplinaService } from 'src/app/shared/services/disciplina/disciplina.service';
 import { ActivatedRoute } from '@angular/router';
+import { MensagensService } from 'src/app/shared/services/mensagens/mensagens.service';
 @Component({
   selector: 'app-manutenir-disciplina',
   templateUrl: './manutenir-disciplina.component.html',
@@ -14,7 +15,8 @@ export class ManutenirDisciplinaComponent {
 
   constructor(private roteador:Router,
               private disciplinaService: DisciplinaService,
-              private activatedRoute: ActivatedRoute) {
+              private activatedRoute: ActivatedRoute,
+              private mensagensService: MensagensService) {
     this.disciplina= new Disciplina('',0)
     this.activatedRoute.params.subscribe(
       (parametros) => {
@@ -30,23 +32,34 @@ export class ManutenirDisciplinaComponent {
   }
 
   manutenir() {
-    this.disciplinaService.inserir(this.disciplina).subscribe(
-      (disciplinaRetornada:Disciplina) => {
-        console.log(disciplinaRetornada);
-        this.disciplina= new Disciplina('',0)
-        this.roteador.navigate(['listardisciplina'])
-      }
-    )
+    try{
+      this.disciplinaService.inserir(this.disciplina).subscribe(
+        (disciplinaRetornada:Disciplina) => {
+          console.log(disciplinaRetornada);
+          this.disciplina= new Disciplina('',0)
+          this.mensagensService.sucesso('Disciplina cadastrada com sucesso!');
+          this.roteador.navigate(['listardisciplina'])
+        }
+      )
+    }catch(erro){
+      this.mensagensService.erro('Erro ao cadastrar disciplina!');
+    }
   }
 
   editar() {
-    this.disciplinaService.editar(this.disciplina).subscribe(
-      (disciplinaRetornada:Disciplina) => {
-        console.log(disciplinaRetornada);
-        this.disciplina= new Disciplina('',0)
-        this.isEdicao = false;
-        this.roteador.navigate(['listardisciplina'])
-      }
-    )
+    try{
+      this.disciplinaService.editar(this.disciplina).subscribe(
+        (disciplinaRetornada:Disciplina) => {
+          console.log(disciplinaRetornada);
+          this.disciplina= new Disciplina('',0)
+          this.isEdicao = false;
+          this.mensagensService.sucesso('Disciplina editada com sucesso!');
+          this.roteador.navigate(['listardisciplina'])
+        }
+      )
+    }
+    catch(erro){
+      this.mensagensService.erro('Erro ao editar disciplina!');
+    }
   }
 }

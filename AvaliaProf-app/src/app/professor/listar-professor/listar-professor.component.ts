@@ -2,6 +2,7 @@ import { Component} from '@angular/core';
 import { Router } from '@angular/router';
 import { Professor } from 'src/app/shared/models/professor';
 import { DisciplinaService } from 'src/app/shared/services/disciplina/disciplina.service';
+import { MensagensService } from 'src/app/shared/services/mensagens/mensagens.service';
 import { ProfessorService } from 'src/app/shared/services/professor/professor.service';
 
 @Component({
@@ -15,7 +16,9 @@ export class ListarProfessorComponent{
   professores: Professor[]=[];
   disciplinas: string = ''
   displayedColumns: string[] = ['nome', 'matricula', 'media', 'navaliacoes','disciplinas', 'acoes'];
-  constructor(private professorService: ProfessorService,
+  constructor(
+    private mensagensService: MensagensService,
+    private professorService: ProfessorService,
     private disciplinaService: DisciplinaService, 
     private router: Router) {
     this.professorService.listar().subscribe(
@@ -28,19 +31,24 @@ export class ListarProfessorComponent{
   }
 
   excluir(professor: Professor){
-    this.professorService.excluir(professor).subscribe(
-      () => {
-        this.professorService.listar().subscribe(
-          (professoresRetornados:Professor[]) =>
-          {
-            for (let disciplina of professor.disciplinas) {
-              disciplina.removerProfessor(professor);
-              this.disciplinaService.editar(disciplina).subscribe();
-            }
-            this.professores = professoresRetornados;
-          })
-      }
-    )
+    try{
+      this.professorService.excluir(professor).subscribe(
+        () => {
+          this.professorService.listar().subscribe(
+            (professoresRetornados:Professor[]) =>
+            {
+              for (let disciplina of professor.disciplinas) {
+                disciplina.removerProfessor(professor);
+                this.disciplinaService.editar(disciplina).subscribe();
+              }
+              this.professores = professoresRetornados;
+              this.mensagensService.sucesso('Professor excluído com sucesso!');
+            })
+        }
+      )
+    } catch(erro){
+      this.mensagensService.erro('Erro ao excluir professor!');
+    }
   }
 
   calcularMedia(professor: Professor): number{
