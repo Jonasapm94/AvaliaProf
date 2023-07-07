@@ -6,6 +6,8 @@ import { ManutenirAlunoComponent } from './aluno/manutenir-aluno/manutenir-aluno
 import { ListarAlunoComponent } from './aluno/listar-aluno/listar-aluno.component';
 import { TelaInicialComponent } from './paginas/tela-inicial/tela-inicial.component';
 import { TelaAvaliacaoComponent } from './paginas/tela-avaliacao/tela-avaliacao.component';
+import { ListarDisciplinaComponent } from './disciplina/listar-disciplina/listar-disciplina.component';
+import { ManutenirDisciplinaComponent } from './disciplina/manutenir-disciplina/manutenir-disciplina.component';
 
 const routes: Routes = [
   {
@@ -31,7 +33,16 @@ const routes: Routes = [
   {
     path: 'avaliacaoprofessor',
     component: TelaAvaliacaoComponent
+  },
+  {
+    path: 'listardisciplina',
+    component: ListarDisciplinaComponent
+  },
+  {
+    path: 'cadastrardisciplina',
+    component: ManutenirDisciplinaComponent
   }
+
 ];
 
 @NgModule({

@@ -11,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { TelaInicialComponent } from './paginas/tela-inicial/tela-inicial.component';
 import { TelaAvaliacaoComponent } from './paginas/tela-avaliacao/tela-avaliacao.component';
 import { PaginasModule } from './paginas/paginas.module';
+import { AvaliacaoModule } from './avaliacao/avaliacao.module';
+import { DisciplinaModule } from './disciplina/disciplina.module';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { PaginasModule } from './paginas/paginas.module';
     AlunoModule,
     FormsModule,
     HttpClientModule,
-    PaginasModule
+    PaginasModule,
+    AvaliacaoModule,
+    DisciplinaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

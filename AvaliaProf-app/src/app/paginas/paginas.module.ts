@@ -4,17 +4,19 @@ import { TelaAvaliacaoComponent } from './tela-avaliacao/tela-avaliacao.componen
 import { TelaInicialComponent } from './tela-inicial/tela-inicial.component';
 import { AngularMaterialModule } from '../angular-material/angular-material.module';
 import { LayoutModule } from '../layout/layout.module';
-
+import { AvaliacaoModule } from '../avaliacao/avaliacao.module';
 @NgModule({
   declarations: [
     TelaAvaliacaoComponent,
-    TelaInicialComponent
+    TelaInicialComponent,
+    TelaAvaliacaoComponent
 
   ],
   imports: [
     CommonModule,
     AngularMaterialModule,
-    LayoutModule
+    LayoutModule,
+    AvaliacaoModule
   ]
 })
 export class PaginasModule { }

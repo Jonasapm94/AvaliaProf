@@ -1,0 +1,17 @@
+.tabela{
+    padding: 2rem;
+    background-color: var(--primary-color);
+}
+
+.nome-coluna{
+    color: var(--primary-color);
+}
+
+.tabela th{
+    background-color: var(--secundary-color);
+}
+
+.tabela td{
+    background-color: var(--primary-color);
+    border: 2px solid var(--secundary-color);
+}

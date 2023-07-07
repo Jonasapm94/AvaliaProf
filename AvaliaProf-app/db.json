@@ -27,28 +27,26 @@
   ],
   "professores": [
     {
-      "id": 1,
-      "nome": "devTeacher",
-      "email": "exampleprofessor@email.com",
-      "senha": "12345",
-      "matricula": "12345",
+      "id": 3,
+      "nome": "Ricardo França",
+      "matricula": "20212370026",
+      "email": "ricardo@gmail.com",
+      "senha": "_>cnsCU)f4G#'j+o",
       "disciplinas": [
-        "Disciplina Mock 1",
-        "Disciplina Mock 2"
+        {
+          "nome": "Matemática",
+          "professores": []
+        },
+        {
+          "nome": "Estrutura de Dados",
+          "professores": []
+        },
+        {
+          "nome": "Pweb1",
+          "professores": []
+        }
       ],
-      "formacoes": [
-        "Formação Mock 1",
-        "Formação Mock 2"
-      ]
-    },
-    {
-      "id": 2,
-      "nome": "homero",
-      "matricula": "123123123",
-      "email": "homero@gmail.com",
-      "senha": "1190283219398",
-      "disciplinas": "historia, filosofia",
-      "formacoes": "Bacharelado História"
+      "formacoes": "Ti"
     }
   ],
   "avaliacoes": [

@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@DiscriminatorValue("Aluno")
 public class Aluno extends Usuario{
 
     private String curso;

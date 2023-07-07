@@ -4,13 +4,11 @@ package pweb.avaliaprof.modelo;
 import jakarta.persistence.*;
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "tipo", discriminatorType = DiscriminatorType.STRING)
-@DiscriminatorValue("usuario")
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Usuario {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
     private String nome;
     private String senha;

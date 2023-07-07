@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListarAvaliacoesComponent } from './listar-avaliacoes/listar-avaliacoes.component';
+import { AngularMaterialModule } from '../angular-material/angular-material.module';
 
 
 
@@ -9,7 +10,11 @@ import { ListarAvaliacoesComponent } from './listar-avaliacoes/listar-avaliacoes
     ListarAvaliacoesComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AngularMaterialModule
+  ],
+  exports:[
+    ListarAvaliacoesComponent
   ]
 })
 export class AvaliacaoModule { }

@@ -1,0 +1,10 @@
+<div class="box">
+    <mat-card class="container">
+        <mat-card-header><mat-card-title class="titulo">Cadastrar Disciplina</mat-card-title></mat-card-header>
+        <mat-form-field>
+            <mat-label>Nome</mat-label>
+            <input class="input" matInput [(ngModel)]="disciplina.nome">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="manutenir()">Cadastrar</button>
+    </mat-card>
+</div>

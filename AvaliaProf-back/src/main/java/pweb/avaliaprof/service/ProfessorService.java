@@ -15,4 +15,8 @@ public class ProfessorService {
     public List<Professor> getProfessores(){
         return this.professorRepository.findAll();
     }
+
+    public Professor cadastrarProfessor(Professor professor) {
+    	return this.professorRepository.save(professor);
+    }
 }
