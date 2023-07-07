@@ -9,7 +9,7 @@ public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private long id;
+    private Long id;
     private String nome;
     private String senha;
     private String email;
@@ -56,7 +56,7 @@ public class Usuario {
         this.matricula = matricula;
     }
 
-    public long getId() {
+    public Long getId() {
         return this.id;
     }
 }

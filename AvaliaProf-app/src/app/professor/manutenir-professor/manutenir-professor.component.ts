@@ -11,11 +11,11 @@ import { DisciplinaService } from 'src/app/shared/services/disciplina/disciplina
   styleUrls: ['./manutenir-professor.component.css']
 })
 export class ManutenirProfessorComponent implements OnChanges{
-  
+
   public professor: Professor;
   public disciplinas: Disciplina[] = [];
-  
-  constructor(private roteador: Router, 
+
+  constructor(private roteador: Router,
               private professorService:ProfessorService,
               private disciplinaService: DisciplinaService) {
     this.professor = new Professor(0,'','','','',[],[])
@@ -26,14 +26,14 @@ export class ManutenirProfessorComponent implements OnChanges{
   }
 
   ngOnChanges(){
-    console.log(this.professor)
   }
 
   manutenir() {
-    console.log(this.professor)
+    console.log("professor que vai: ",this.professor);
+    this.professor.id
     this.professorService.inserir(this.professor).subscribe(
       (professorRetornado) => {
-        console.log(professorRetornado);
+        console.log("professor que chega: ",professorRetornado);
         this.professor = new Professor(0,'','','','',[],[]);
         this.roteador.navigate(['listarprofessores'])
       }

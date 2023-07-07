@@ -15,11 +15,12 @@ export class ListarProfessorComponent{
 
   constructor(private professorService: ProfessorService) {
     this.professorService.listar().subscribe(
-      (professoresRetornados:Professor[]) => 
-      {this.professores = professoresRetornados
-        console.log(this.professores)})
+      (professoresRetornados:Professor[]) => {
+        this.professores = professoresRetornados
+        console.log(this.professores)
+      })
 
-    
+
   }
 
   calcularMedia(professor: Professor): number{

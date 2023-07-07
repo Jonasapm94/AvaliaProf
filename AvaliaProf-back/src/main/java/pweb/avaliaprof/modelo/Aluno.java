@@ -1,7 +1,9 @@
 package pweb.avaliaprof.modelo;
 import jakarta.persistence.CascadeType;
-import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
 import java.util.ArrayList;
@@ -9,6 +11,10 @@ import java.util.List;
 
 @Entity
 public class Aluno extends Usuario{
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
     private String curso;
     @OneToMany(mappedBy = "aluno", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
@@ -46,4 +52,12 @@ public class Aluno extends Usuario{
         this.avaliacoes.set(index, avaliacao);
     }
 
+    @Override
+    public String toString() {
+        return "Aluno{" +
+                "id=" + id +
+                ", curso='" + curso + '\'' +
+                ", avaliacoes=" + avaliacoes +
+                '}';
+    }
 }

@@ -15,4 +15,15 @@ public class AlunoService {
     public List<Aluno> getAlunos(){
         return this.alunoRepository.findAll();
     }
+
+    public Aluno cadastrarAlunoOuAtualizar(Aluno aluno) {
+        System.out.println(aluno);
+        return this.alunoRepository.save(aluno);
+    }
+
+    public Aluno getAlunoById(Long idAluno) {
+        return this.alunoRepository.findById(idAluno).orElse(null);
+    }
+
+    
 }

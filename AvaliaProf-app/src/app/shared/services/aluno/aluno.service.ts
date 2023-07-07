@@ -8,21 +8,23 @@ import { Aluno } from '../../models/aluno';
 })
 export class AlunoService {
 
+  base_url: string = "http://localhost:8080/aluno"
+
   constructor(private httpClient: HttpClient) {}
 
   listar(): Observable<Aluno[]>{
-    return this.httpClient.get<Aluno[]>('http://localhost:3000/alunos');
+    return this.httpClient.get<Aluno[]>(`${this.base_url}/listar`);
   }
 
   inserir(aluno: Aluno): Observable<Aluno>{
-    return this.httpClient.post<Aluno>('http://localhost:3000/alunos', aluno);
+    return this.httpClient.post<Aluno>(`${this.base_url}/inserir`, aluno);
   }
 
   pegarPorId(id:string): Observable<Aluno>{
-    return this.httpClient.get<Aluno>(`http://localhost:3000/alunos/${id}`);
+    return this.httpClient.get<Aluno>(`${this.base_url}${id}`);
   }
 
   editar(aluno: Aluno): Observable<Aluno>{
-    return this.httpClient.put<Aluno>(`http://localhost:3000/alunos/${aluno.id}`, aluno)
+    return this.httpClient.put<Aluno>(`/${aluno.id}`, aluno)
   }
 }

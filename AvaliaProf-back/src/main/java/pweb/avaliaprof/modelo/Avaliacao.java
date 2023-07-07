@@ -6,18 +6,21 @@ import jakarta.persistence.*;
 public class Avaliacao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
+
     @ManyToOne
     private Professor professor;
+
     @ManyToOne
     private Aluno aluno;
+    
     private String comentario;
     private float nota;
 
     public Avaliacao(){
         super();
     }
-    public Avaliacao(long id, Professor professor, Aluno aluno, String comentario, float nota){
+    public Avaliacao(Long id, Professor professor, Aluno aluno, String comentario, float nota){
         this.id = id;
         this.professor = professor;
         this.aluno = aluno;
@@ -25,7 +28,7 @@ public class Avaliacao {
         this.nota = nota;
     }
 
-    public long getId(){
+    public Long getId(){
         return this.id;
     }
 

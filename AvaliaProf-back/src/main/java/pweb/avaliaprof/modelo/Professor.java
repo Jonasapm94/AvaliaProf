@@ -6,6 +6,9 @@ import java.util.List;
 
 @Entity
 public class Professor extends Usuario{
+    @Id
+    private Long id;
+    
     @ManyToMany(mappedBy = "professores", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
 
@@ -54,5 +57,15 @@ public class Professor extends Usuario{
 
     public String getFormacao() {
         return this.formacao;
+    }
+
+    @Override
+    public String toString() {
+        return "Professor{" +
+                "id=" + id +
+                ", disciplinas=" + disciplinas +
+                ", avaliacoes=" + avaliacoes +
+                ", formacao='" + formacao + '\'' +
+                '}';
     }
 }

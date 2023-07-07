@@ -5,7 +5,7 @@ export class Usuario{
     public matricula:string;
     public email:string;
     public senha:string;
-    
+
     constructor(
          id:number,
          nome:string='',

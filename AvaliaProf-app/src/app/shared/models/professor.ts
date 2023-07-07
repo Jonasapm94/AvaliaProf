@@ -4,18 +4,18 @@ import { Avaliacao } from "./avaliacao";
 
 export class Professor extends Usuario{
     disciplinas:Disciplina[];
-    formacoes:string[];
+    formacao:string[];
     avaliacoes:Avaliacao[]=[];
-    
+
     constructor(id:number,
                 nome:string,
                 matricula:string,
                 email:string,
                 senha:string,
                 disicplinas:Disciplina[],
-                formacoes:string[]){
+                formacao:string[]){
         super(id,nome,matricula,email,senha);
         this.disciplinas = disicplinas;
-        this.formacoes = formacoes;
+        this.formacao = formacao;
     }
 }

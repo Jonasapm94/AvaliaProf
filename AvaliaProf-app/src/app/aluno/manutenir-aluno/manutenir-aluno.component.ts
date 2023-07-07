@@ -14,11 +14,12 @@ export class ManutenirAlunoComponent {
     this.aluno = new Aluno(0,'','','','','');
   }
   manutenir(){
+    console.log(this.aluno);
     this.alunoService.inserir(this.aluno).subscribe(
       (alunoRetornado)=>{
         console.log(alunoRetornado);
         this.aluno = new Aluno(0,'','','','','');
-        this.roteador.navigate(['listaralunos'])
+        // this.roteador.navigate(['listaralunos'])
       }
     )
   }

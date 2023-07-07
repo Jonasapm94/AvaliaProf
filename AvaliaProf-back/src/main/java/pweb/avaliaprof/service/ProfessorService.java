@@ -17,6 +17,13 @@ public class ProfessorService {
     }
 
     public Professor cadastrarProfessor(Professor professor) {
-    	return this.professorRepository.save(professor);
+        try {
+            return this.professorRepository.save(professor);
+        } catch (Exception e) {
+            // TODO: handle exception
+            System.out.println(e);
+            return null;
+        }
+        
     }
 }
