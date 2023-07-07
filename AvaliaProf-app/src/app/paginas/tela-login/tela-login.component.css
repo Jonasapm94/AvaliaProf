@@ -15,7 +15,9 @@
 }
 
 .login-container {
-  background-color: #D9D9D9;
+  /* background-color: #D9D9D9; */
+  background-color: var(--secundary-color);
+  color: var(--primary-color);
   width: 30vw;
   height: 80vh;
   padding: 20px;
@@ -52,9 +54,14 @@
   margin: auto;
 }
 
+a {
+  color: var(--primary-color);
+}
+
 .login-button {
   width: 80%;
-  background-color: rgb(240, 240, 240);
+  /* background-color: rgb(240, 240, 240); */
+  background-color: var(--primary-color);
   margin-left: 10%;
 }
 
