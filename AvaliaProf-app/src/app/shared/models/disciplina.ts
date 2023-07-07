@@ -1,9 +1,11 @@
 import { Professor } from './professor';
 export class Disciplina{
+    id: number;
     nome: string;
     professores: Professor[] = [];
-    constructor(nome: string){
+    constructor(nome: string, id: number){
         this.nome = nome;
+        this.id = id;
     }
 
     public adicionarProfessor(professor: Professor): void{

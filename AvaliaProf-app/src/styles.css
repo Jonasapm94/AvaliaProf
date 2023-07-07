@@ -23,5 +23,5 @@ body{
     margin: 0;
     background-color: var(--primary-color);
     font-family: var(--regular-font);
-    overflow: hidden;
+    overflow: auto;
 }

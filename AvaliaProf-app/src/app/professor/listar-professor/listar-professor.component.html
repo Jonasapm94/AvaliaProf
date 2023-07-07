@@ -1,40 +1,47 @@
 <div>
-  <h1 class="titulo">Gerenciar Professores</h1>
-  <div>
-    <table mat-table [dataSource]="professores">
+  <table mat-table [dataSource]="professores" class="mat-elevation-z8" class="tabela">
+    <!-- Nome Column -->
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef class="nome-coluna"> Nome</th>
+      <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+    </ng-container>
+  
+    <!-- matricula Column -->
+    <ng-container matColumnDef="matricula">
+      <th mat-header-cell *matHeaderCellDef class="nome-coluna"> Matricula </th>
+      <td mat-cell *matCellDef="let element"> {{element.matricula}} </td>
+    </ng-container>
 
-      <!-- Nome Column -->
-      <ng-container matColumnDef="nome">
-        <th mat-header-cell *matHeaderCellDef> Nome </th>
-        <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
-      </ng-container>
-  
-      <!-- Matrícula Column -->
-      <ng-container matColumnDef="matricula">
-        <th mat-header-cell *matHeaderCellDef> Matrícula </th>
-        <td mat-cell *matCellDef="let element"> {{element.matricula}} </td>
-      </ng-container>
-  
-      <!-- Média Column -->
-      <ng-container matColumnDef="media">
-        <th mat-header-cell *matHeaderCellDef> Média </th>
-        <td mat-cell *matCellDef="let element"> {{calcularMedia(element.avaliacoes)}} </td>
-      </ng-container>
-  
-      <!-- Número de Avaliações Column -->
-      <ng-container matColumnDef="nAvaliacoes">
-        <th mat-header-cell *matHeaderCellDef> N° Avaliações </th>
-        <td mat-cell *matCellDef="let element"> {{element.avaliacoes.size}} </td>
-      </ng-container>
+    <!-- Média Column -->
+    <ng-container matColumnDef="media">
+      <th mat-header-cell *matHeaderCellDef class="nome-coluna"> Média </th>
+      <td mat-cell *matCellDef="let element"> {{calcularMedia(element)}} </td>
+    </ng-container>
 
-      <!-- Ações Column -->
-      <ng-container matColumnDef="acoes">
-        <th mat-header-cell *matHeaderCellDef> Ações </th>
-        <td mat-cell> Editar Excluir </td>
-      </ng-container>
+    <!-- N° de Avaliações Column -->
+    <ng-container matColumnDef="navaliacoes">
+      <th mat-header-cell *matHeaderCellDef class="nome-coluna"> N° de Avaliações </th>
+      <td mat-cell *matCellDef="let element"> {{element.avaliacoes.length}} </td>
+    </ng-container>
+
+    <!-- Disciplinas Column -->
+    <ng-container matColumnDef="disciplinas">
+      <th mat-header-cell *matHeaderCellDef class="nome-coluna"> Disciplinas </th>
+      <td mat-cell *matCellDef="let element"> {{disciplinasToString(element)}} </td>
+    </ng-container>
+
+    <!-- Ações Column -->
+    <ng-container matColumnDef="acoes">
+      <th mat-header-cell *matHeaderCellDef class="nome-coluna"> Ações </th>
+      <td mat-cell *matCellDef="let element"> 
+        <button mat-raised-button color="primary" (click)="editar(element)">Editar</button>
+        <button mat-raised-button color="warn" (click)="excluir(element)">Excluir</button>
+      </td>
+    </ng-container>
+
+
   
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
-  </div>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
 </div>

@@ -1,10 +1,12 @@
 export class Avaliacao{
+    public id:number;
     public idProfessor:number;
     public idAluno:number;
     public nota:number;
     public comentario:string;
 
-    constructor(nota:number,
+    constructor(id:number,
+                nota:number,
                 comentario:string,
                 idProfessor:number,
                 idAluno:number){
@@ -12,5 +14,6 @@ export class Avaliacao{
         this.idAluno = idAluno;
         this.comentario = comentario;
         this.nota = nota;
+        this.id = id;
     }
 }

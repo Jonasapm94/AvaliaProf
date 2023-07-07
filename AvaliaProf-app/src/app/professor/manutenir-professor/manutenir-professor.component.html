@@ -27,6 +27,7 @@
             <mat-label>Formações</mat-label>
             <input class="input" matInput [(ngModel)]="professor.formacoes">
         </mat-form-field>
-        <button mat-raised-button color="primary" (click)="manutenir()">Cadastrar</button>
+        <button mat-raised-button *ngIf="isEdicao" color="primary" (click)="editar()">Editar</button>
+        <button mat-raised-button *ngIf="!isEdicao" color="primary" (click)="manutenir()">Cadastrar</button>
     </mat-card>
 </div>

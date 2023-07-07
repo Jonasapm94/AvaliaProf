@@ -12,14 +12,14 @@ import { AvaliacaoService } from 'src/app/shared/services/avaliacao/avaliacao.se
 export class TelaAvaliacaoComponent {
   avaliacao: Avaliacao;
   constructor(private avaliavaoService: AvaliacaoService, private roteador: Router) {
-    this.avaliacao = new Avaliacao(0,'',0,0);
+    this.avaliacao = new Avaliacao(0,0,'',0,0);
   }
 
   publicar() {
     this.avaliavaoService.inserir(this.avaliacao).subscribe(
       (avaliacaoRetornada) => {
         console.log(avaliacaoRetornada);
-        this.avaliacao = new Avaliacao(0,'',0,0);
+        this.avaliacao = new Avaliacao(0,0,'',0,0);
         this.roteador.navigate(['/'])
       }
     )

@@ -38,6 +38,12 @@
 #logo{
   font-family: var(--logo-font);
   font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+#logo:hover{
+  font-size: 1.6rem;
+  cursor: pointer;
 }
 
 button.nav-button{

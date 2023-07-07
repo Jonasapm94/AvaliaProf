@@ -25,7 +25,7 @@ export class Aluno extends Usuario{
     }
 
     public avaliarProfessor(professor:Professor, nota:number, comentario:string):void{
-        let avaliacao:Avaliacao = new Avaliacao(nota, comentario, professor.id, this.id);
+        let avaliacao:Avaliacao = new Avaliacao(0, nota, comentario, professor.id, this.id);
         this._avaliacoes.push(avaliacao);
     }
 

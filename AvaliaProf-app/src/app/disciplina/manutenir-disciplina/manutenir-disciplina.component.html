@@ -5,6 +5,7 @@
             <mat-label>Nome</mat-label>
             <input class="input" matInput [(ngModel)]="disciplina.nome">
         </mat-form-field>
-        <button mat-raised-button color="primary" (click)="manutenir()">Cadastrar</button>
+        <button mat-raised-button color="primary" *ngIf="isEdicao" (click)="editar()">Editar</button>
+        <button mat-raised-button color="primary" *ngIf="!isEdicao" (click)="manutenir()">Cadastrar</button>
     </mat-card>
 </div>

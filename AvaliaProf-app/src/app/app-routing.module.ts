@@ -19,6 +19,10 @@ const routes: Routes = [
     component: ManutenirProfessorComponent
   },
   {
+    path: 'editarprofessor/:id',
+    component: ManutenirProfessorComponent
+  },
+  {
     path: 'listarprofessores',
     component: ListarProfessorComponent
   },
@@ -41,7 +45,11 @@ const routes: Routes = [
   {
     path: 'cadastrardisciplina',
     component: ManutenirDisciplinaComponent
-  }
+  },
+  {
+    path: 'editardisciplina/:id',
+    component: ManutenirDisciplinaComponent
+  },
 
 ];
 

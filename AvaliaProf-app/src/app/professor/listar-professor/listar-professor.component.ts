@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
+import { Router } from '@angular/router';
 import { Professor } from 'src/app/shared/models/professor';
+import { DisciplinaService } from 'src/app/shared/services/disciplina/disciplina.service';
 import { ProfessorService } from 'src/app/shared/services/professor/professor.service';
 
 @Component({
@@ -11,23 +13,54 @@ import { ProfessorService } from 'src/app/shared/services/professor/professor.se
 
 export class ListarProfessorComponent{
   professores: Professor[]=[];
-  displayedColumns: string[] = ['nome', 'matricula', 'media', 'nAvaliacoes','acoes'];
-
-  constructor(private professorService: ProfessorService) {
+  disciplinas: string = ''
+  displayedColumns: string[] = ['nome', 'matricula', 'media', 'navaliacoes','disciplinas', 'acoes'];
+  constructor(private professorService: ProfessorService,
+    private disciplinaService: DisciplinaService, 
+    private router: Router) {
     this.professorService.listar().subscribe(
       (professoresRetornados:Professor[]) => 
-      {this.professores = professoresRetornados
-        console.log(this.professores)})
+      {this.professores = professoresRetornados;})
+  }
 
-    
+  editar(professor: Professor){
+    this.router.navigate(['editarprofessor', professor.id]);
+  }
+
+  excluir(professor: Professor){
+    this.professorService.excluir(professor).subscribe(
+      () => {
+        this.professorService.listar().subscribe(
+          (professoresRetornados:Professor[]) =>
+          {
+            for (let disciplina of professor.disciplinas) {
+              disciplina.removerProfessor(professor);
+              this.disciplinaService.editar(disciplina).subscribe();
+            }
+            this.professores = professoresRetornados;
+          })
+      }
+    )
   }
 
   calcularMedia(professor: Professor): number{
-    let soma = 0;
     if(professor.avaliacoes.length == 0){
-      return 0
+      return 0;
     }
-    professor.avaliacoes.forEach(avaliacao => soma += avaliacao.nota);
-    return soma/professor.avaliacoes.length;
+    let soma = 0;
+    let media = 0;
+    for(let i = 0; i < professor.avaliacoes.length; i++){
+      soma += professor.avaliacoes[i].nota;
+    }
+    media = soma/professor.avaliacoes.length;
+    return media;
+  }
+
+  disciplinasToString(professor: Professor): string{
+    this.disciplinas = '';
+    for(let disciplina of professor.disciplinas){
+      this.disciplinas += disciplina.nome + ', ';
+    }
+    return this.disciplinas;
   }
 }
